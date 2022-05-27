@@ -1,10 +1,10 @@
-#import allure
+
+
 import time
-
+import allure
+import openpyxl
 from selenium.webdriver.common.by import By
-
 from BasePage.BasePage import BasePage
-
 
 class LoginPage:
     text_userName_xpath = (By.NAME, "Email")
@@ -15,8 +15,9 @@ class LoginPage:
         self.BasePage = None
         self.driver = driver
 
-    #@allure.step("enter userName and password and click on login button")
+    @allure.step("enter userName and password and click on login button")
     def loginPage(self, userName, password):
+        print("enter username and password------------------------------------------------------------------")
         self.BasePage = BasePage(self.driver)
         self.BasePage.enter_text_into_element(self.text_userName_xpath, userName)
         self.BasePage.enter_text_into_element(self.text_passWord_xpath, password)
