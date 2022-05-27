@@ -1,8 +1,6 @@
 
 
 import time
-import allure
-import openpyxl
 from selenium.webdriver.common.by import By
 from BasePage.BasePage import BasePage
 
@@ -15,7 +13,6 @@ class LoginPage:
         self.BasePage = None
         self.driver = driver
 
-    @allure.step("enter userName and password and click on login button")
     def loginPage(self, userName, password):
         print("enter username and password------------------------------------------------------------------")
         self.BasePage = BasePage(self.driver)

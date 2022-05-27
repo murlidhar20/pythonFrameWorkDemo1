@@ -5,8 +5,7 @@ from TestCase.conftest import setUp
 from BasePage.BasePage import BasePage
 from PageObject.LoginPage import LoginPage
 
-import allure
-import openpyxl
+
 
 
 
